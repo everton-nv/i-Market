@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">i-Market</string>
+    <string name="Cadastrar">Cadastrar</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="Nick">Nick</string>
+    <string name="Senha">Senha</string>
+    <string name="Email">Email</string>
+    <string name="CNPJ">CNPJ</string>
+    <string name="Telefone">Telefone</string>
+    <string name="Endereço">Endereco</string>
+    <string name="Mercado">Mercado</string>
+    <string name="Produto">Produto</string>
+    <string name="Preço">Preço</string>
+    <string name="Categoria">Categoria</string>
 </resources>
