@@ -9,6 +9,10 @@ public class Mercado {
     private double receita;
     private double nota;
 
+    public Mercado(){
+
+    }
+
     public Mercado(int id, String nome, String endereco, long cnpj, int num_telefone, double receita, double nota) {
         this.id = id;
         this.nome = nome;
