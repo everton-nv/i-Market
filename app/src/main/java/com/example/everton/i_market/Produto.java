@@ -12,8 +12,7 @@ public class Produto {
     }
 
     //Precisa mesmo de um construtor dedicado???
-    public Produto(int id, String nome, double preco, String categoria, int id_mercado) {
-        this.id = id;
+    public Produto(String nome, double preco, String categoria, int id_mercado) {
         this.nome = nome;
         this.preco = preco;
         this.categoria = categoria;

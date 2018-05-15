@@ -7,6 +7,7 @@ import android.widget.EditText;
 
 public class CadMercadoActivity extends AppCompatActivity {
     private EditText edtNick, edtEmail, edtSenha, edtMercado, edtTelefone, edtCNPJ, edtEndereco;
+    private ServicoMercado servicoMercado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,18 @@ public class CadMercadoActivity extends AppCompatActivity {
     }
 
     public void cadastrarMercado(View view){
+        //String nick = edtNick.getText().toString();
+        //String senha = edtSenha.getText().toString();
+        //String email = edtEmail.getText().toString();
+        String strcnpj = edtCNPJ.getText().toString();
+        long cnpj = Long.parseLong(strcnpj);
+        String strtelefone = edtTelefone.getText().toString();
+        int telefone = Integer.parseInt(strtelefone);
+        String endereco = edtEndereco.getText().toString();
+        String mercado = edtMercado.getText().toString();
+
+        servicoMercado.cadastrarMercado(1, mercado,endereco, cnpj, telefone);
+
 
     }
 
