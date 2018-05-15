@@ -8,16 +8,15 @@ public class Produto {
     private int id_mercado;
 
     public Produto() {
-        //implementação de construtor padrão. O objeto pode ser inicializado na classe de negócios??
+        //implementaÃ§Ã£o de construtor padrÃ£o. O objeto pode ser inicializado na classe de negÃ³cios??
     }
 
     //Precisa mesmo de um construtor dedicado???
-    public Produto(int id, String nome, double preco, String categoria, int id_mercado) {
-        this.id = id;
+    public Produto(String nome, double preco, String categoria, int id_mercado) {
         this.nome = nome;
         this.preco = preco;
         this.categoria = categoria;
-        this.id_mercado = id_mercado;       //CAMPO NÃO MODELADO NO BANCO!!
+        this.id_mercado = id_mercado;       //CAMPO NÃƒO MODELADO NO BANCO!!
     }
 
     public int getId() {

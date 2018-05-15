@@ -14,6 +14,7 @@ public class CadProdutoActivity extends AppCompatActivity {
     private EditText edtProduto, edtPreco;
     private Spinner spinner;
     private String[] listaCategoria = enumCategoriaProdutoLista();
+    private ServicoProduto servicoProduto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class CadProdutoActivity extends AppCompatActivity {
         spinner = (Spinner)findViewById(R.id.spinnerCategoria);
         spinner.setAdapter(adapter);
 
-        //Metodo para quando um elemento do Spinner é selecionado()
+        //Metodo para quando um elemento do Spinner Ã© selecionado()
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
 
             @Override
@@ -46,6 +47,11 @@ public class CadProdutoActivity extends AppCompatActivity {
 
 
     public void cadastrarProduto(View view){
+        String produto     = edtProduto.getText().toString();
+        String strpreco    = edtPreco.getText().toString();
+        Double preco = Double.parseDouble(strpreco);
+        String categoria = (String) spinner.getSelectedItem();
+        servicoProduto.cadastrarProduto(produto, preco, categoria, 1);
 
     }
 
