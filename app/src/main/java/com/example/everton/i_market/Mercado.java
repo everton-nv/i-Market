@@ -6,19 +6,21 @@ public class Mercado {
     private String endereco;
     private long cnpj;
     private int num_telefone;
-    private double receita = 0.0;
-    private double nota = 0.0;
+    private double receita;
+    private double nota;
 
     public Mercado(){
 
     }
 
-    public Mercado(int id, String nome, String endereco, long cnpj, int num_telefone) {
+    public Mercado(int id, String nome, String endereco, long cnpj, int num_telefone, double receita, double nota) {
         this.id = id;
         this.nome = nome;
         this.endereco = endereco;
         this.cnpj = cnpj;
         this.num_telefone = num_telefone;
+        this.receita = receita;
+        this.nota = nota;
     }
 
     public int getId() {
