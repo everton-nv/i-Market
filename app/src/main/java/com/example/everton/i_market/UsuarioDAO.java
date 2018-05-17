@@ -13,7 +13,7 @@ import static com.example.everton.i_market.ImarketDataBaseContract.PRIMARY_KEY;
 public class UsuarioDAO {
     
     private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + ImarketDataBaseContract.UsuarioTable.TABLE_NAME + " (" +
+            "CREATE TABLE IF NOT EXISTS " + ImarketDataBaseContract.UsuarioTable.TABLE_NAME + " (" +
                     ImarketDataBaseContract.UsuarioTable._ID + PRIMARY_KEY +
                     ImarketDataBaseContract.UsuarioTable.TABLE_COLUMN_USUARIO_EMAIL + TEXT_TYPE + COMMA_SEP +
                     ImarketDataBaseContract.UsuarioTable.TABLE_COLUMN_USUARIO_SENHA + TEXT_TYPE + COMMA_SEP +

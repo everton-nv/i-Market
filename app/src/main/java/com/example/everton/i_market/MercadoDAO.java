@@ -16,7 +16,7 @@ import static com.example.everton.i_market.ImarketDataBaseContract.TEXT_TYPE;
 public class MercadoDAO {
 
     private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + ImarketDataBaseContract.MercadoTable.TABLE_NAME + " (" +
+            "CREATE TABLE IF NOT EXISTS " + ImarketDataBaseContract.MercadoTable.TABLE_NAME + " (" +
                     ImarketDataBaseContract.MercadoTable._ID + PRIMARY_KEY_AUTO +
                     ImarketDataBaseContract.MercadoTable.TABLE_COLUMN_MERCADO_NOME + TEXT_TYPE + COMMA_SEP +
                     ImarketDataBaseContract.MercadoTable.TABLE_COLUMN_MERCADO_ENDERECO + TEXT_TYPE + COMMA_SEP +

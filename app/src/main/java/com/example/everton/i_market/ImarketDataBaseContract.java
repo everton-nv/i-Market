@@ -50,7 +50,7 @@ public final class ImarketDataBaseContract {
     
     public static class PedidoTable implements BaseColumns{
         
-        public static final String TABLE_NAME = "Cliente";
+        public static final String TABLE_NAME = "Pedido";
         public static final String TABLE_COLUMN_ID_CLIENTE = "ID_cliente";
         public static final String TABLE_COLUMN_ID_MERCADO = "ID_mercado";
         public static final String TABLE_COLUMN_IDS_PRODUTOS = "IDs_produtos";

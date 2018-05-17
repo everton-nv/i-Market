@@ -1,5 +1,6 @@
 package com.example.everton.i_market;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,12 +8,12 @@ import android.widget.EditText;
 
 public class CadMercadoActivity extends AppCompatActivity {
     private EditText edtNick, edtEmail, edtSenha, edtMercado, edtTelefone, edtCNPJ, edtEndereco;
-    private ServicoMercado servicoMercado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cad_mercado);
+
 
         edtNick = (EditText)findViewById(R.id.edtNick);
         edtSenha = (EditText)findViewById(R.id.edtSenha);
@@ -34,7 +35,11 @@ public class CadMercadoActivity extends AppCompatActivity {
         String endereco = edtEndereco.getText().toString();
         String mercado = edtMercado.getText().toString();
 
-        servicoMercado.cadastrarMercado(1, mercado,endereco, cnpj, telefone);
+        ServicoMercado servicoMercado = new ServicoMercado(getApplicationContext());
+        servicoMercado.cadastrarMercado(0, mercado,endereco, cnpj, telefone);
+        Intent it = new Intent(CadMercadoActivity.this, MainActivity.class);
+        startActivity(it);
+        finish();
 
 
     }

@@ -19,7 +19,7 @@ public class ProdutoDAO {
     private SQLiteDatabase dbUser;    //acessa a instancia do bando de dados;
     
     private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + ImarketDataBaseContract.ProdutoTable.TABLE_NAME + " (" +
+            "CREATE TABLE IF NOT EXISTS " + ImarketDataBaseContract.ProdutoTable.TABLE_NAME + " (" +
                     ImarketDataBaseContract.ProdutoTable._ID + PRIMARY_KEY_AUTO +
                     ImarketDataBaseContract.ProdutoTable.TABLE_COLUMN_PRODUTO_NOME + TEXT_TYPE + COMMA_SEP +
                     ImarketDataBaseContract.ProdutoTable.TABLE_COLUMN_PRODUTO_PRECO + TEXT_TYPE + COMMA_SEP +

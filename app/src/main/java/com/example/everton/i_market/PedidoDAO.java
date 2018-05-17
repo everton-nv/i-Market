@@ -14,7 +14,7 @@ import static com.example.everton.i_market.ImarketDataBaseContract.TEXT_TYPE;
 public class PedidoDAO {
 
     private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + ImarketDataBaseContract.PedidoTable.TABLE_NAME + " (" +
+            "CREATE TABLE IF NOT EXISTS " + ImarketDataBaseContract.PedidoTable.TABLE_NAME + " (" +
                     ImarketDataBaseContract.PedidoTable._ID + PRIMARY_KEY_AUTO +
                     ImarketDataBaseContract.PedidoTable.TABLE_COLUMN_ID_MERCADO + TEXT_TYPE + COMMA_SEP +
                     ImarketDataBaseContract.PedidoTable.TABLE_COLUMN_ID_CLIENTE + TEXT_TYPE + COMMA_SEP +

@@ -23,8 +23,6 @@ public class Database extends SQLiteOpenHelper {
 
         String createTable = ClienteDAO.createMyTable();
         db.execSQL(createTable);
-        createTable = UsuarioDAO.createMyTable();
-        db.execSQL(createTable);
         createTable = MercadoDAO.createMyTable();
         db.execSQL(createTable);
         createTable = PedidoDAO.createMyTable();

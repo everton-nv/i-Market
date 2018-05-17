@@ -12,7 +12,7 @@ import static com.example.everton.i_market.ImarketDataBaseContract.TEXT_TYPE;
 public class ClienteDAO {
 
     private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + ImarketDataBaseContract.ClienteTable.TABLE_NAME + " (" +
+            "CREATE TABLE IF NOT EXISTS " + ImarketDataBaseContract.ClienteTable.TABLE_NAME + " (" +
                     ImarketDataBaseContract.ClienteTable._ID + PRIMARY_KEY_AUTO +
                     ImarketDataBaseContract.ClienteTable.TABLE_COLUMN_CLIENTE_NOME + TEXT_TYPE + COMMA_SEP +
                     ImarketDataBaseContract.ClienteTable.TABLE_COLUMN_CLIENTE_ENDERECO + TEXT_TYPE + COMMA_SEP +

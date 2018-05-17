@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AnalysisProjectProfileManager">
-    <option name="PROJECT_PROFILE" value="Project Default" />
+    <option name="PROJECT_PROFILE" value="unnamed" />
     <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
     <scopes />
     <profiles>
-      <profile version="1.0" is_locked="false">
-        <option name="myName" value="Project Default" />
+      <profile profile_name="unnamed" version="1.0" is_locked="false">
         <coding_rule class="AM_CREATES_EMPTY_JAR_FILE_ENTRY" level="MAJOR" enabled="true" />
         <coding_rule class="AM_CREATES_EMPTY_ZIP_FILE_ENTRY" level="MAJOR" enabled="true" />
         <coding_rule class="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" level="CRITICAL" enabled="false" />

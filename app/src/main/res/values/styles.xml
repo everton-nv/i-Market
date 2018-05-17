@@ -6,9 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="lightgreen">#67F771</item>
-        <item name="lightgreen2">#32fc3f</item>
-        <item name="white">#ffffff</item>
     </style>
 
 </resources>

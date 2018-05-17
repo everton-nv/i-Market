@@ -1,5 +1,6 @@
 package com.example.everton.i_market;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,6 @@ public class CadProdutoActivity extends AppCompatActivity {
     private EditText edtProduto, edtPreco;
     private Spinner spinner;
     private String[] listaCategoria = enumCategoriaProdutoLista();
-    private ServicoProduto servicoProduto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,12 @@ public class CadProdutoActivity extends AppCompatActivity {
         String strpreco    = edtPreco.getText().toString();
         Double preco = Double.parseDouble(strpreco);
         String categoria = (String) spinner.getSelectedItem();
+
+        ServicoProduto servicoProduto = new ServicoProduto(getApplicationContext());
         servicoProduto.cadastrarProduto(produto, preco, categoria, 1);
+        Intent it = new Intent(CadProdutoActivity.this, MainActivity.class);
+        startActivity(it);
+        finish();
 
     }
 
