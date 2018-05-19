@@ -6,6 +6,9 @@
     <string name="Senha">Senha</string>
     <string name="Email">Email</string>
     <string name="CNPJ">CNPJ</string>
+    <string name="CPF">CPF</string>
+    <string name="NdoCartão">N° do Cartão</string>
+    <string name="Nome">Nome</string>
     <string name="Telefone">Telefone</string>
     <string name="Endereço">Endereco</string>
     <string name="Mercado">Mercado</string>

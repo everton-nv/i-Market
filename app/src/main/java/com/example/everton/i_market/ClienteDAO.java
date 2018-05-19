@@ -1,6 +1,10 @@
 package com.example.everton.i_market;
 
+import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -19,6 +23,12 @@ public class ClienteDAO {
                     ImarketDataBaseContract.ClienteTable.TABLE_COLUMN_CLIENTE_CPF + TEXT_TYPE + COMMA_SEP +
                     ImarketDataBaseContract.ClienteTable.TABLE_COLUMN_CLIENTE_TELEFONE + TEXT_TYPE + COMMA_SEP +
                     ImarketDataBaseContract.ClienteTable.TABLE_COLUMN_CLIENTE_CARTAO + TEXT_TYPE + " )";
+    private final Database dataBase;
+    private SQLiteDatabase dbUser;
+
+    public ClienteDAO(Context context){
+        this.dataBase = new Database(context);
+    }
 
     public static String createMyTable(){
         return SQL_CREATE_ENTRIES;
@@ -28,8 +38,29 @@ public class ClienteDAO {
         return "DROP TABLE IF EXISTS " + ImarketDataBaseContract.ClienteTable.TABLE_NAME;
     }
 
-    public Boolean save(){
-        return true;
+    public Boolean save(Cliente cliente){
+        int id = cliente.getId();
+        dbUser = dataBase.getWritableDatabase();
+        try{
+            ContentValues values = new ContentValues();
+            values.put("Mercado", cliente.getNome());
+            values.put("Endereco", cliente.getEndereco());
+            values.put("CNPJ", cliente.getCpf());
+            values.put("Telefone", cliente.getNum_telefone());
+            values.put("Receita", cliente.getReceita());
+            values.put("Nota", cliente.getNota());
+            if (id!=0){                                         //se o mercado já tem id então update
+                String _id = String.valueOf(id);
+                String[] whereArgs = new String[]{_id};
+                return dbUser.update(ImarketDataBaseContract.ClienteTable.TABLE_NAME, values,
+                        "_id=?", whereArgs)>0;
+            }else{                                              //caso contrário inserir no banco;
+                Log.w("Banco", "Sucesso");
+                return dbUser.insert(ImarketDataBaseContract.ClienteTable.TABLE_NAME,"",values)>0;
+            }
+        }finally {
+            dbUser.close();
+        }
     }
 
     public Boolean delete(){
