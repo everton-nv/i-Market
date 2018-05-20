@@ -24,4 +24,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(it);
         finish();
     }
+
+    public void cadCliente(View view){
+        Intent it = new Intent(MainActivity.this, CadClienteActivity.class);
+        startActivity(it);
+        finish();
+    }
 }

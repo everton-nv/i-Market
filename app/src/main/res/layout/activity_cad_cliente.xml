@@ -10,8 +10,8 @@
     <EditText
         android:id="@+id/edtNick"
         android:layout_width="0dp"
-        android:layout_height="62dp"
-        android:layout_marginBottom="13dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:ems="10"
@@ -19,14 +19,13 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edtSenha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtSenha"
         android:layout_width="0dp"
-        android:layout_height="46dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:ems="10"
@@ -34,14 +33,13 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edtEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtNick" />
 
     <EditText
         android:id="@+id/edtEmail"
         android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
@@ -71,7 +69,7 @@
     <EditText
         android:id="@+id/edtEndereco"
         android:layout_width="0dp"
-        android:layout_height="46dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
@@ -80,7 +78,6 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edtCartao"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtTelefone" />
 
@@ -88,8 +85,8 @@
         android:id="@+id/btnCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="138dp"
         android:layout_marginStart="16dp"
         android:background="@color/colorPrimary"
         android:onClick="cadastrarCliente"
@@ -119,19 +116,21 @@
         android:id="@+id/btnCancelar"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="7dp"
         android:onClick="cancelarCadastro"
         android:text="@string/Cancelar"
-        app:layout_constraintBottom_toBottomOf="@+id/btnCadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCadastrar"
-        app:layout_constraintTop_toTopOf="@+id/btnCadastrar" />
+        app:layout_constraintTop_toBottomOf="@+id/edtCartao" />
 
     <EditText
         android:id="@+id/edtNome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="7dp"
         android:layout_marginEnd="14dp"
         android:layout_marginStart="14dp"
         android:ems="10"
@@ -139,14 +138,13 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edtTelefone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtCpf" />
 
     <EditText
         android:id="@+id/edtCartao"
         android:layout_width="0dp"
-        android:layout_height="47dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="15dp"
         android:layout_marginEnd="17dp"
         android:layout_marginStart="17dp"
@@ -155,7 +153,6 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtEndereco" />
 

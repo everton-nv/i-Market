@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".CadMercadoActivity" />
         <activity android:name=".CadProdutoActivity" />
-        <activity android:name=".CadClienteActivity"></activity>
+        <activity android:name=".CadClienteActivity">
+        </activity>
     </application>
 
 </manifest>

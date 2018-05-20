@@ -1,7 +1,9 @@
 package com.example.everton.i_market;
 
 
+import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
@@ -18,6 +20,12 @@ public class UsuarioDAO {
                     ImarketDataBaseContract.UsuarioTable.TABLE_COLUMN_USUARIO_EMAIL + TEXT_TYPE + COMMA_SEP +
                     ImarketDataBaseContract.UsuarioTable.TABLE_COLUMN_USUARIO_SENHA + TEXT_TYPE + COMMA_SEP +
                     ImarketDataBaseContract.UsuarioTable.TABLE_COLUMN_USUARIO_NICK  + TEXT_TYPE + " )";
+    private final Database dataBase;
+    private SQLiteDatabase dbUser;
+
+    public UsuarioDAO(Context context){
+        this.dataBase = new Database(context);
+    }
 
     public static String createMyTable(){
         return SQL_CREATE_ENTRIES;

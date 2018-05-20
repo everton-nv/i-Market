@@ -43,12 +43,11 @@ public class ClienteDAO {
         dbUser = dataBase.getWritableDatabase();
         try{
             ContentValues values = new ContentValues();
-            values.put("Mercado", cliente.getNome());
+            values.put("Cliente", cliente.getNome());
             values.put("Endereco", cliente.getEndereco());
-            values.put("CNPJ", cliente.getCpf());
+            values.put("CPF", cliente.getCpf());
             values.put("Telefone", cliente.getNum_telefone());
-            values.put("Receita", cliente.getReceita());
-            values.put("Nota", cliente.getNota());
+            values.put("Cartao", cliente.getNum_cartao());
             if (id!=0){                                         //se o mercado já tem id então update
                 String _id = String.valueOf(id);
                 String[] whereArgs = new String[]{_id};
@@ -63,7 +62,7 @@ public class ClienteDAO {
         }
     }
 
-    public Boolean delete(){
+    public Boolean delete(Cliente cliente){
         return true;
     }
 
